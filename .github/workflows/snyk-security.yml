@@ -91,7 +91,7 @@ jobs:
         uses: snyk/actions/setup@master
 
       - name: Run Snyk Code (SAST)
-        run: snyk code test --report --sarif-file-output=snyk-code.sarif || true
+        run: snyk code test --report
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
