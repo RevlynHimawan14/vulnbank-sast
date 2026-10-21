@@ -90,7 +90,7 @@ jobs:
       - name: Setup Snyk CLI
         uses: snyk/actions/setup@master
 
-      - - name: Run Snyk Code (SAST) — SARIF utk GitHub + publish ke Snyk Dashboard
+      - name: Run Snyk Code (SAST) — SARIF utk GitHub + publish ke Snyk Dashboard
         run: |
           snyk code test --sarif-file-output=snyk-code.sarif \
             --report --project-name="${{ github.repository }}" || true
